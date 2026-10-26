@@ -1,0 +1,6 @@
+numpy>=1.21
+pillow>=9.0
+matplotlib>=3.8
+pytest>=8
+# optional audio on Linux/macOS (needs PortAudio: sudo apt install portaudio19-dev)
+# pyaudio>=0.2.13
