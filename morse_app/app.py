@@ -39,7 +39,7 @@ class MorseApp:
         self.stop_event = threading.Event()
 
         root.title("Aviation Morse Code Communicator")
-        root.geometry("900x620")
+        root.geometry("900x660")
         root.configure(bg=BG)
         root.protocol("WM_DELETE_WINDOW", self.on_close)
 
@@ -118,7 +118,7 @@ class MorseApp:
         chars = [c for c in m.MORSE_CODE_DICT if c != ' ']
         for i, ch in enumerate(chars):
             code = m.MORSE_CODE_DICT[ch]
-            b = tk.Button(grid, text=f"{ch}\n{code}", width=7, height=2, font=("DejaVu Sans Mono", 11, "bold"),
+            b = tk.Button(grid, text=f"{ch}\n{code}", width=6, height=2, font=("DejaVu Sans Mono", 11, "bold"),
                           bg=PANEL, fg=FG, activebackground="#2b3a4a", activeforeground=ACCENT, relief="flat",
                           command=lambda c=code: self.play(
                               c, lambda: lamp.itemconfig(item, fill="yellow"),
@@ -242,9 +242,13 @@ class MorseApp:
         self.app_msg = tk.StringVar(value="MAYDAY MAYDAY MAYDAY")
         ttk.Entry(row, textvariable=self.app_msg, width=30, font=MONO).pack(side="left", padx=6)
         ttk.Button(row, text="Transmit", command=self.do_transmit).pack(side="left")
+
+        presets = ttk.Frame(tab)
+        presets.pack(fill="x", padx=10, pady=(0, 8))
+        ttk.Label(presets, text="Presets:").pack(side="left")
         for name, msg in m.PRESETS.items():
-            ttk.Button(row, text=name, command=lambda s=msg: (self.app_msg.set(s), self.do_transmit())
-                       ).pack(side="left", padx=2)
+            ttk.Button(presets, text=name, command=lambda s=msg: (self.app_msg.set(s), self.do_transmit())
+                       ).pack(side="left", padx=3)
 
         self.canvas = tk.Canvas(tab, width=CANVAS_W, height=CANVAS_H, bg="#7fb2e5", highlightthickness=0)
         self.canvas.pack(padx=10, pady=(0, 10))

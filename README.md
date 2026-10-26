@@ -16,6 +16,12 @@ This repo also implements the report's signal-processing section (X) in [`morse_
 | Decode Morse | Morse to text (unknown symbols become `?`), or decode a WAV recording |
 | Application | Three-phase animation: the aircraft approaches, transmits while the ATC panel shows the code and the lamp flashes, then departs. Presets: MAYDAY, SOS, PAN-PAN, VOR ident |
 
+| Learn | Encode |
+|---|---|
+| ![Learn](docs/screenshots/learn.png) | ![Encode](docs/screenshots/encode.png) |
+| **Decode** (here: a noisy WAV recording) | **Application** (transmitting, lamp lit) |
+| ![Decode](docs/screenshots/decode.png) | ![Application](docs/screenshots/application.png) |
+
 Timing, as in the report:
 
 | Element | Duration |
@@ -83,5 +89,6 @@ tests/       test_morse.py, test_dsp_audio.py
 scripts/     snr_sweep.py
 results/     snr_sweep.csv, figures/
 samples/     sos_clean.wav, mayday_snr0.wav, vor_ident_vtz.wav
+docs/        screenshots/ of the four GUI sections
 report/      submitted report (PDF)
 ```
