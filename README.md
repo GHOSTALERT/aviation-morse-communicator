@@ -7,6 +7,7 @@ A Python/Tkinter trainer with synchronised tone and signal lamp, an aircraft-to-
 ![DSP](https://img.shields.io/badge/DSP-STFT%20band--energy%20detector-0b7285)
 ![Tests](https://img.shields.io/badge/tests-37%20passing-2e7d32)
 ![Course](https://img.shields.io/badge/VIT-Signal%20Processing-1e3a8a)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 <p align="center">
   <img src="docs/screenshots/application.png" alt="Aircraft transmitting MAYDAY to ATC, lamp lit" width="720"><br>
@@ -90,3 +91,7 @@ Signal Processing course project, School of Electronics Engineering (SENSE), VIT
 | Aditya Manoj | 24BVD0070 |
 | Gavin Shalan Fernandes | 24BVD0083 |
 | Jyothiraditya | 24BVD0205 |
+
+## License
+
+Released under the [MIT License](LICENSE).
